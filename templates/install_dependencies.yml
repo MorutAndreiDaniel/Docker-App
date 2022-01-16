@@ -1,0 +1,11 @@
+- name: Install dependencies for Docker
+  apt:
+    name: "{{item}}"
+    state: present
+    update_cache: yes
+  loop:
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - gnupg-agent
+    - software-properties-common

@@ -1,0 +1,4 @@
+- name: Copy Docker file
+  copy:
+   src: "{{dockerfile_folder}}"
+   dest: "{{ path_of_dockerfile  }}"

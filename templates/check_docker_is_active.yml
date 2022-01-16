@@ -1,0 +1,5 @@
+- name: Check if Docker is active
+  service:
+    name: docker
+    state: started
+    enabled: yes

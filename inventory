@@ -1,0 +1,12 @@
+docker:
+  hosts:
+    20.1.1.103
+  vars:
+    ports: 3000:3000
+    dockerfile_folder: /home/dani/ansible/app/
+    docker_image_name: getting-started
+    docker_container_name: cranky_shaw
+    docker_repository: deb https://download.docker.com/linux/ubuntu bionic stable
+    path_of_dockerfile: /home/dani  
+    gpg_key: https://download.docker.com/linux/ubuntu/gpg
+    python_dependencies: python3-pip

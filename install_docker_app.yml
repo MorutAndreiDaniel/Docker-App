@@ -1,0 +1,25 @@
+---
+- hosts: docker
+  become: true
+  tasks:
+  
+  - name: Install Dependencies
+    include: templates/install_dependencies.yml
+  - name: Add GPG Key
+    include: templates/add_gpg_key.yml
+  - name: Add Docker Repository
+    include: templates/add_docker_repository.yml
+  - name: Install Python Dependencies
+    include: templates/install_python_dependencies.yml
+  - name: Install Docker SDK for Python
+    include: templates/install_docker_sdk_for_python.yml
+  - name: Install Docker
+    include: templates/install_docker.yml
+  - name: Check if Docker is active
+    include: templates/check_docker_is_active.yml
+  - name: Copy Docker file
+    include: templates/copy_docker_file.yml
+  - name: Build docker image from Dockerfile
+    include: templates/build_docker_image.yml
+  - name: Deploy container
+    include: templates/deploy_container.yml

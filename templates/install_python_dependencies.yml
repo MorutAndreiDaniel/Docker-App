@@ -1,0 +1,6 @@
+ - name: Install Python Dependencies
+   become: true
+   apt:
+     update_cache: yes
+     state: latest
+     name: "{{ python_dependencies  }}"

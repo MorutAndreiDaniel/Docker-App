@@ -1,0 +1,3 @@
+ - name: Deploy container
+   command: docker run -dp "{{ ports  }}" getting-started
+   become: true

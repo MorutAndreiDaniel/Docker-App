@@ -1,0 +1,9 @@
+- name: Build docker image from Dockerfile
+  docker_image:
+    name: "{{ docker_image_name }}"
+    build:
+      pull: yes
+      path: "{{ path_of_dockerfile  }}"
+    state: present
+    source: build
+
